@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+import sympy
+import sys
+
+n = 0
+n1 = 0
+n2 = 0
+file1 = open(sys.argv[1], 'r')
+Lines = file1.readlines()
+for line in Lines:
+    n = int(line.strip())
+    factors = sympy.factorint(n)
+    factors = list(factors)
+    n1 = factors[0]
+    n2 = n // n1
+    print("{}={}*{}".format(n, n2, n1))
