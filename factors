@@ -13,4 +13,4 @@ for line in Lines:
     factors = list(factors)
     n1 = factors[0]
     n2 = n // n1
-    print("{}={}*{}".format(n, n1, n2))
+    print("{}={}*{}".format(n, n2, n1))
